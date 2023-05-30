@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+
+}
+body{
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    font-family: inherit;
+    background-color: hsl(216, 57%, 11%);
+    /*background-color: #fdc7fd;*/
+    text-rendering: optimizeSpeed;
+    padding: 2em;
+    color: #252525;
+
+}
+.wrapper{
+    max-width: 34rem;
+    margin: auto;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 2em;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+h1{
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+.area {
+    margin-top: 3em;
+}
+.area textarea{
+    display: block;
+    width: 100%;
+    font-size :1.7rem;
+    font-weight: 500;
+    color: #252525;
+    padding: 1em;
+    margin-bottom: 1em;
+    border-radius: 1rem ;
+    border: 0;
+    outline: 0;
+    resize: vertical;
+    background-color: #a9ff7b;
+    font-family:'serif';
+}
+.btn{
+    display: block;
+    width: 100%;
+    background-color: #5a7a49;
+    color: #fff;
+    padding: 1em;
+    border-radius: 1rem;
+    font-size:1.8rem ;
+    font-weight: 700;
+    cursor: pointer;
+    user-select: none;
+    border: none;
+    outline: none;
+}
+::placeholder{
+    font-size: 1.4rem;
+    color: #6c6c6c;
+}
+#copy , #paste{
+  color: #ff0000;
+  background:linear-gradient(to top,pink,magenta);
+  width: 50px;
+  font-weight: 900;
+  -webkit-text-stroke: 0.5px white;
+  border-radius: 30px;
+}
+.di1{
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+.container{
+    position: relative;
+   width: 100%;
+   height: 100vh;
+   overflow: calc(100px);
+}
+.bubbles{
+position: relative;
+display: flex;
+
+}
+.bubbles span{
+position: relative;
+width: 30px;
+height: 30px;
+background: #4fc3dc;
+margin: 0 4px;
+border-radius: 50%;
+box-shadow: 
+0 0 50px hwb(191 31% 14%);
+animation: animate 15s linear infinite;
+animation-duration: calc(125s/var(--i));
+
+}
+.bubbles span:nth-child(even){
+background: #ff2d75;
+box-shadow: 
+0 0 50px #ff2d75;
+ }
+
+
+@keyframes animate {
+0%{transform: translateY(100vh)scale(0)};
+100%{transform: translateY(-10vh)scale(1)};
+}
